@@ -20,7 +20,7 @@ class CreateListingsTable extends Migration
             $table->integer('listing_type')->comment("For ex. 1=vehicle, 2=tools, 3=consumables etc");
             $table->text('listing_desc');
             $table->float('listing_rate')->comment('For ex. Rs7/hr, rate is 7');
-            $table->integer('listing_mode')->comment('For ex. Rs7/hr, mode is hour(hr)');
+            $table->string('listing_mode')->comment('For ex. Rs7/hr, mode is hour(hr)');
             $table->string('listing_img')->comment('Listing image url');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
