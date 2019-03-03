@@ -227,7 +227,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button class="tg-btn" type="button">Send Offer Now</button>
+                        <button class="tg-btn" type="button" onclick="alert('Your enquiry has been forwarded.')">Send Offer Now</button>
                     </div>
                 </fieldset>
             </form>

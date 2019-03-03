@@ -13,6 +13,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="{{asset('icons/ios/ios-appicon-180-180.png')}}">
+    <script src="{{asset('js/pace.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
     <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">

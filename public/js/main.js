@@ -516,3 +516,8 @@ jQuery(document).on('ready', function() {
 		social_tools: false
 	});
 });
+
+
+jQuery('a').on('click', function(){
+	package.start();
+});
