@@ -94,7 +94,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.instamojo.com/@pbehre/" target="_blank">
                                             <i class="icon-cart"></i>
                                             <span>{!!GoogleTranslate::translate('Payment', get_locale())!!}</span>
                                         </a>

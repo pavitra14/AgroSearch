@@ -36,7 +36,7 @@
 													</select>
 												</div>
 											</div>
-											<button class="tg-btn" type="submit">{!!GoogleTranslate::translate('Search Now', get_locale())!!}/button>
+											<button class="tg-btn" type="submit">{!!GoogleTranslate::translate('Search Now', get_locale())!!}</button>
 										</fieldset>
 									</form>
 								</div>

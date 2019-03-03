@@ -8,7 +8,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <ul class="tg-navcurrency">
                         <li><a href="#" data-toggle="modal" data-target="#tg-modalselectcurrency">Current Language : 
-						{{session('locale')}}</a></li>
+						{{session('locale') ?? 'en'}}</a></li>
                     </ul>
                     <div class="dropdown tg-themedropdown tg-userdropdown">
                         <a href="javascript:void(0);" id="tg-adminnav" class="tg-btndropdown" data-toggle="dropdown">
@@ -64,7 +64,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://www.instamojo.com/@pbehre/" target="_blank">
                                     <i class="icon-cart"></i>
                                     <span>{!!GoogleTranslate::translate('Payments', get_locale())!!}</span>
                                 </a>

@@ -518,6 +518,3 @@ jQuery(document).on('ready', function() {
 });
 
 
-jQuery('a').on('click', function(){
-	package.start();
-});

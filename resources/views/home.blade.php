@@ -187,5 +187,22 @@
                 }
             });
         });
+
+        $('#change-lang').on('click',function(){
+            var lang = $('select#locale').val();
+            console.log(lang);
+            $.ajax({
+                url: '{{url("/")}}/locale/' + lang,
+                method: "GET",
+                success: function(data)
+                {
+                    console.log(data);
+                    if(data == 'success')
+                    {
+                        location.reload();
+                    }
+                }
+            });
+        });
     </script>
 @endsection
