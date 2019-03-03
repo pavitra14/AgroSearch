@@ -3,9 +3,11 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Order extends Model
 {
+    use SearchableTrait;
     protected $fillable = [
         'placed_for', 'placed_mode', 'payment_mode', 'payment_details'
     ];

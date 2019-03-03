@@ -15,7 +15,9 @@ use Illuminate\Http\Request;
 
 Route::post('login', 'API\UserController@login');
 Route::post('register', 'API\UserController@register');
-
+Route::any('/', function () {
+    return 'Agrosearch API';
+});
 Route::group(['middleware' => 'auth:api'], function(){
     // Get Details of current user
     Route::post('details', 'API\UserController@details');

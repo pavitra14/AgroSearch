@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Listing;
 use App\User; 
 use Validator;
@@ -47,5 +48,98 @@ class ListingController extends Controller
         $success['status'] = "Done";
         $success['listing_details'] = $listing;
         return response()->json(['success' => $success], $this->successStatus);
+    }
+
+    public function web_details($id)
+    {
+        $listing = Listing::where('id',$id)->firstOrFail();
+        $listing_user = $listing->user()->firstOrFail();
+        $response = array(
+            'listing'=>$listing,
+            'listing_user'=>$listing_user
+        );
+        DB::table('listings')->where('id',$id)->increment('views');
+        return view('listing_details', $response);
+    }
+    public function add_listing(Request $request)
+    {
+        $listing_img = $request->file('listing_img_file')->store('public');
+        $listing_img = \str_replace("public","storage",$listing_img);
+        $input = $request->all();
+        $input['listing_img'] = $listing_img;
+        // dd($request->all());
+        // $input['listing_date_from'] = date('Y-m-d H:i:s', strtotime($input['listing_date_from-x']));
+        // $input['listing_date_to'] = date('Y-m-d H:i:s', strtotime($input['listing_date_to-x']));
+        $input['listing_date_from'] = str_replace("/","-",$input['listing_date_from-x']);
+        $input['listing_date_to'] = str_replace("/","-",$input['listing_date_to-x']);
+        // dd($input);
+        $user = Auth::user();
+        $listing = $user->listings()->create($input);
+        session()->put('success',"Listing Uploaded");
+        return redirect(route('dashboard'));
+    }
+
+    public function get_views($id)
+    {
+        return Auth::user()->listings()->where('id', $id)->firstOrFail()->views;
+    }
+
+    public function show_my_ads(){
+        $user = Auth::user();
+        $allads = $user->listings()->paginate(10);
+        
+        $response = [
+            'user' => $user,
+            'all' => $allads,
+        ];
+        return view('myads', $response);
+    }
+
+    public function edit_listing_show($id)
+    {
+        $user = Auth::user();
+        $listing = $user->listings()->where('id', $id)->firstOrFail();
+        $response = [
+            'user' => $user,
+            'listing' => $listing
+        ];
+        return view('edit_listing', $response);   
+    }
+
+    public function edit_listing($id, Request $request)
+    {
+        $listing = Auth::user()->listings()->where('id',$id)->firstOrFail();
+        $input = $request->all();
+        $listing->listing_title = $input['listing_title'];
+        $listing->listing_desc = $input['listing_desc'];
+        $listing->listing_rate = $input['listing_rate'];
+        $listing->listing_mode = $input['listing_mode'];
+        if($request->filled('listing_date_from-x'))
+        {
+            $listing->listing_date_from = date('Y-m-d H:i:s', strtotime($input['listing_date_from-x']));   
+        }
+        if($request->filled('listing_date_to-x'))
+        {
+            $listing->listing_date_to = date('Y-m-d H:i:s', strtotime($input['listing_date_to-x']));
+        }
+        if($request->hasFile('listing_img_file'))
+        {
+            $listing_img = $request->file('listing_img_file')->store('public');
+            $listing_img = \str_replace("public","storage",$listing_img);
+            $listing->listing_img = $listing_img;
+        }
+        $listing->listing_sell_mode = $input['listing_sell_mode'];
+        $listing->listing_display_mode = $input['listing_display_mode'];
+        $listing->save();
+        session()->put('info','Listing saved');
+        return redirect(route('myads'));
+    }
+
+    public function delete_listing($id)
+    {
+        $listing = Auth::user()->listings()->where('id',$id)->firstOrFail();
+        $listing->delete();
+        session()->put('info','Listing deleted');
+        return redirect(route('myads'));
     }
 }

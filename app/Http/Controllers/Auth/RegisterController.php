@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -50,7 +50,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone' => ['required', 'max:10', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
     }
@@ -63,10 +63,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $otp = mt_rand(1111,9999);
+        $send_sms_url = "http://sms.provanic.com/api/sendhttp.php?authkey=264613A5rpfloS5c72c879&mobiles=".$data['phone']."&message=Welcome%20to%20AgroSearch.%20You've%20been%20registered%20successfully.&sender=AGRSRH&route=4&country=91";
+        $send = file_get_contents($send_sms_url);
         return User::create([
             'name' => $data['name'],
-            'email' => $data['email'],
+            'phone' => $data['phone'],
             'password' => Hash::make($data['password']),
+            'otp' => $otp
         ]);
     }
 }

@@ -19,7 +19,7 @@ class UserController extends Controller
          * @return \Illuminate\Http\Response 
          */ 
         public function login(){ 
-            if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){ 
+            if(Auth::attempt(['phone' => request('phone'), 'password' => request('password')])){ 
                 $user = Auth::user(); 
                 $success['token'] =  $user->createToken('AgroSearchAPP')->accessToken; 
                 return response()->json(['success' => $success], $this->successStatus); 
@@ -37,7 +37,7 @@ class UserController extends Controller
         { 
             $validator = Validator::make($request->all(), [ 
                 'name' => 'required', 
-                'email' => 'required|email', 
+                'phone' => 'required', 
                 'password' => 'required', 
                 'c_password' => 'required|same:password', 
             ]);
