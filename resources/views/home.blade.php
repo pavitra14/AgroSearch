@@ -27,12 +27,12 @@
                                         @php
                                             for($i = 1; $i <= category_count() ; $i++)
 												{
-                                                    echo '<div class="tg-category">';
+                                                    echo '<a id="cat-'.$i.'" href="'.url('/').'/category/'.$i.'"><div class="tg-category">';
                                                         echo '<div class="tg-categoryholder">';
                                                             echo '<figure><img src="'.asset('images/categories/'.$i.'.png').'" alt="'.category($i).'"></figure>';
                                                             echo '<h3>'.category($i).'</h3>';
                                                         echo '</div>';
-                                                    echo '</div>';
+                                                    echo '</div></a>';
 												}
                                         @endphp
                                     </div>
@@ -93,7 +93,7 @@
                                 @endforeach
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="tg-btnbox">
-                                    <a class="tg-btn" href="javascript:void(0);">View All</a>
+                                    <a class="tg-btn" href="{{route('view_all_featured')}}">View All</a>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                             </div>
                             <div class="tg-ads">
                                 @foreach ($latest_listings as $listing)
-                                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1">
                                         <div class="tg-ad tg-verifiedad">
                                             <figure>
                                                 {{-- <span class="tg-themetag tg-featuretag">featured</span> --}}
@@ -152,7 +152,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="tg-btnbox">
-                                    <a class="tg-btn" href="javascript:void(0);">View All</a>
+                                    <a class="tg-btn" href="{{route('view_all_latest')}}">View All</a>
                                 </div>
                             </div>
                         </div>
@@ -166,4 +166,11 @@
             <!--************************************
                     Main End
             *************************************-->
+            <script>
+                function cat_search(id)
+                {
+                    event.preventDefault();
+                    $('cat-' + id).submit();
+                }
+            </script>
 @endsection

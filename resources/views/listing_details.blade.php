@@ -126,7 +126,7 @@
 								<div class="tg-ad tg-verifiedad tg-detail tg-addetail">
 									<div class="tg-adcontent">
 										<ul class="tg-pagesequence">
-											<li><a href="javascript:void(0);">{{category($listing->listing_category)}}</a></li>
+											<li><a href="javascript:void(0);">{{category($listing->listing_type)}}</a></li>
 										</ul>
 										<div class="tg-adtitle">
 											<h2>{{$listing->listing_title}}</h2>
@@ -160,9 +160,9 @@
 									<div class="tg-description">
 										<strong>{{$listing->listing_title}}</strong>
 										<p>{{$listing->listing_title}}</p>
-										<p>{{$listing->listing_desc}}</p>
+										<p>{!!$listing->listing_desc!!}</p>
 										<div class="tg-fullimg">
-											<figure><img src="{{$listing->listing_img}}" alt="{{$listing->listing_title}}"></figure>
+											<figure><img src="{{url('/')}}/{{$listing->listing_img}}" alt="{{$listing->listing_title}}"></figure>
 										</div>
 										<p><span>Thanks!</span><i><img src="{{asset('images/icons/img-31.png')}}" alt="Thanks"></i></p>
 									</div>

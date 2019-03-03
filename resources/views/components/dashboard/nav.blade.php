@@ -16,14 +16,7 @@
                                 <li class="menu-item">
                                     <a href="{{route('dashboard')}}">Home</a>
                                 </li>
-                                <li class="menu-item-has-children current-menu-item">
-                                    <a href="javascript:void(0);">View Listings</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="#!">Active Ads</a></li>
-                                        <li><a href="#!">Inactive Ads</a></li>
-                                        <li><a href="#!">Add New</a></li>
-                                    </ul>
-                                </li>
+                                
                             </ul>
                         </div>
                     </nav>

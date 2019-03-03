@@ -33,8 +33,9 @@ session()->forget('password');
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="tg-bannercontent">
-                            <form class="tg-formtheme tg-formbannersearch">
-                                <fieldset>
+                                <form class="tg-formtheme tg-formbannersearch" method="GET" action="{{url('/')}}/search">
+                                    @csrf
+                                    <fieldset>
                                     <div class="form-group tg-inputwithicon">
                                         <i class="icon-bullhorn"></i>
                                         <input type="text" name="customword" class="form-control" placeholder="What are you looking for">
@@ -52,7 +53,7 @@ session()->forget('password');
                                                 @php
                                                 for($i = 1; $i <= category_count() ; $i++) { echo "<option value='$i'>"
                                                     .category($i)."</option>"; } @endphp </select> </div> </div>
-                                                    <button class="tg-btn" type="button">Search Now</button>
+                                                    <button class="tg-btn" type="submit">Search Now</button>
                                 </fieldset>
                             </form>
                         </div>

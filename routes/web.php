@@ -18,6 +18,13 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/listing/{id}', 'ListingController@web_details')->name('listing_detail');
 
+Route::get('/view/featured','ListingController@view_all_featured')->name('view_all_featured');
+Route::get('/view/latest','ListingController@view_all_latest')->name('view_all_latest');
+
+Route::get('/search','ListingController@search');
+Route::get('/category/{id}','ListingController@cat_search');
+
+
 Route::get('storage/{filename}', function ($filename)
 {
     $path = storage_path('public/' . $filename);

@@ -36,13 +36,13 @@
 											</a>
 										</li>
 										<li>
-											<a href="#">
+											<a href="{{route('profile')}}">
 												<i class="icon-cog"></i>
 												<span>Profile Settings</span>
 											</a>
 										</li>
 										<li class="menu-item">
-											<a href="javascript:void(0);">
+											<a href="{{route('myads')}}">
 												<i class="icon-layers"></i>
 												<span>My Ads</span>
 											</a>

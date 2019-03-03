@@ -142,4 +142,62 @@ class ListingController extends Controller
         session()->put('info','Listing deleted');
         return redirect(route('myads'));
     }
+
+    public function view_all_featured()
+    {
+        $listings = Listing::where('listing_display_mode', '2')->paginate(20);
+        $response = [
+            'Featured' => $listings,
+            'mode' => 'Featured'
+        ];
+        return view('view_all',$response);
+    }
+    public function view_all_latest()
+    {
+        $listings = Listing::where('listing_status', '1')->orderBy('created_at','desc')->paginate(20);
+        $response = [
+            'Latest' => $listings,
+            'mode' => 'Latest'
+        ];
+        return view('view_all',$response);
+    }
+    public function search(Request $request)
+    {
+        $slug = '';
+        $location = '';
+        $category = '';
+        $id = '';
+        if($request->has('slug'))
+        {
+            $slug = $request->query('slug');
+        }
+        if($request->has('location'))
+        {
+            $location = $request->query('location');
+        }
+        if($request->has('category'))
+        {
+            $id = $request->query('category');
+            $category = category($request->query('category'));
+        }
+        
+        $search = Listing::where([
+            ['listing_type','LIKE','%'.$id.'%']
+        ])->search($slug.' '.$location.' '.$category)->paginate(20);
+        $response = [
+            'search' => $search,
+            'mode' => $slug.' '.$location.' '.$category
+        ];
+        return view('search',$response);
+    }
+    public function cat_search($id)
+    {
+        $category = category($id);
+        $search = Listing::where('listing_type',$id)->paginate(20);
+        $response = [
+            'search' => $search,
+            'mode' => $category
+        ];
+        return view('cat',$response);
+    }
 }
