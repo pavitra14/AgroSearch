@@ -8,8 +8,8 @@
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="tg-bannercontent">
-									<h1>World’s Largest Marketplace for Farmers</h1>
-									<h2>Search from {{$total_count}} Awesome Verified Ads!</h2>
+									<h1>{!!GoogleTranslate::translate('World\'s Largest Market Place for Farmers', get_locale())!!}</h1>
+									<h2>{!!GoogleTranslate::translate('Search from', get_locale())!!} {{$total_count}}  {!!GoogleTranslate::translate('Verified Ads.', get_locale())!!}</h2>
 									<form class="tg-formtheme tg-formbannersearch" method="GET" action="{{url('/')}}/search">
 										@csrf
 										<fieldset>
@@ -26,17 +26,17 @@
 												<i class="icon-layers"></i>
 												<div class="tg-select">
 													<select>
-														<option value="category">Select Category</option>
+														<option value="category">{!!GoogleTranslate::translate('Select Category', get_locale())!!}</option>
 														@php
 															for($i = 1; $i <= category_count() ; $i++)
 															{
-																echo "<option value='$i'>".category($i)."</option>";
+																echo "<option value='$i'>".GoogleTranslate::translate(category($i), get_locale())."</option>";
 															}
 														@endphp
 													</select>
 												</div>
 											</div>
-											<button class="tg-btn" type="submit">Search Now</button>
+											<button class="tg-btn" type="submit">{!!GoogleTranslate::translate('Search Now', get_locale())!!}/button>
 										</fieldset>
 									</form>
 								</div>

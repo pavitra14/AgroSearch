@@ -8,7 +8,7 @@ Post Listing | AgroSearch
                     Dashboard Banner Start
             *************************************-->
 <div class="tg-dashboardbanner">
-    <h1>Post Listing</h1>
+    <h1>{!!GoogleTranslate::translate('Post Listing', get_locale())!!}</h1>
     <ol class="tg-breadcrumb">
         <li><a href="{{route('home')}}">Main</a></li>
         <li><a href="{{route('dashboard')}}">Dashboard</li></a>

@@ -4,7 +4,8 @@
                 <div class="tg-dbsectionspace tg-haslayout tg-alertexamples">
                     @if (session()->has('info'))    
                     <div class="tg-alert alert alert-info fade in">
-                            <p><strong>Info: </strong> {{session('info')}}</p>
+                            <p><strong>Info: </strong>
+                                {!!GoogleTranslate::translate(session('info'), get_locale())!!}</p>
                             <div class="tg-anchors">
                                 {{-- <a class="tg-btndoaction" href="dashboard.html#">Do Action Now</a> --}}
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -16,7 +17,7 @@
                     @endif
                     @if (session()->has('warning'))
                     <div class="tg-alert alert alert-warning fade in">
-                            <p><strong>Warning:</strong> {{session('warning')}}</p>
+                            <p><strong>Warning:</strong> {!!GoogleTranslate::translate(session('warning'), get_locale())!!}</p>
                             <div class="tg-anchors">
                                 {{-- <a class="tg-btndoaction" href="dashboard.html#">Do Action Now</a> --}}
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -28,7 +29,7 @@
                     @endif
                     @if (session()->has('danger'))
                     <div class="tg-alert alert alert-danger fade in">
-                            <p><strong>Danger:</strong> {{session('danger')}}</p>
+                            <p><strong>Danger:</strong> {!!GoogleTranslate::translate(session('danger'), get_locale())!!}</p>
                             <div class="tg-anchors">
                                 {{-- <a class="tg-btndoaction" href="dashboard.html#">Do Action Now</a> --}}
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -40,7 +41,7 @@
                     @endif
                     @if (session()->has('success'))
                     <div class="tg-alert alert alert-success fade in">
-                            <p><strong>Success:</strong> {{session('success')}}</p>
+                            <p><strong>Success:</strong> {!!GoogleTranslate::translate(session('success'), get_locale())!!}</p>
                             <div class="tg-anchors">
                                 {{-- <a class="tg-btndoaction" href="dashboard.html#">Do Action Now</a> --}}
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>

@@ -1,0 +1,32 @@
+<?php
+
+return [
+    "World's Largest Marketplace For Farmers Search From 2 Awesome Verified Ads!"  => "World's Largest Marketplace For Farmers Search From 2 Awesome Verified Ads!",
+	'What Are You Looking Far'=>'What Are You Looking Far',
+	'Your Location'=>'Your Location',
+	'Select Category'=>'Select Category',
+	'Search Now'=>'Search Now',
+	'Boost Your Search With Trending Categories'=>'Boost Your Search With Trending Categories',
+	'Cultivators'=>'Cultivators',
+	'Irrigation Tools'=>'Irrigation Tools',
+	'Cultivation Tools'=>'Cultivation Tools',
+	'Fertilization Tools'=>'Fertilization Tools',
+	'Consumables'=>'Consumables',
+	'Listings'=>'Listings',
+	'Home'=>'Home',
+	'Dashboard'=>'Dashboard',
+	'Pages'=>'Pages',
+	'AGROSEARCH'=>'AGROSEARCH',
+	'Featured Ads Over 1 Featured Ads'=>'Featured Ads Over 1 Featured Ads',
+	'View All'=>'View All',
+	'Classified'=>'Classified',
+	'AgroSearch Share, Sell and Rent Agriculture equipments '=>'AgroSearch Share, Sell and Rent Agriculture equipments ',
+	'Classified Market place'=>'Classified Market place',
+	'Listings Policy'=>'Listings Policy',
+	'Terms of Use'=>'Terms of Use',
+	'Privacy Policy'=>'Privacy Policy',
+	'Sitemap'=>'Sitemap',
+	'News'=>'News',
+	'2018 All Rights Reserved @ Narcodes'=>'2018 All Rights Reserved @ Narcodes',
+	'Search By Locations'=>'Search By Locations'
+	];

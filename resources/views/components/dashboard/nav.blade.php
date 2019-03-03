@@ -23,7 +23,7 @@
                     <div class="tg-rghtbox">
                         <a class="tg-btn" href="{{route('post_listing')}}">
                             <i class="icon-bookmark"></i>
-                            <span>post an ad</span>
+                            <span>{!!GoogleTranslate::translate('post an ad', get_locale())!!}</span>
                         </a>
                         <div class="dropdown tg-themedropdown tg-notification">
                             <button class="tg-btndropdown" id="tg-notificationdropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,10 +33,10 @@
                             <ul class="dropdown-menu tg-dropdownmenu" aria-labelledby="tg-notificationdropdown">
                                 @if ($user->notifications()->where('status', '0')->count() > 0)
                                     @foreach ($user->notifications()->where('status','0')->get() as $notification)
-                                        <li><p>{{$notification->text}}</p></li>
+                                        <li><p>{!!GoogleTranslate::translate($notification->text, get_locale())!!}</p></li>
                                     @endforeach
                                 @else
-                                    <li><p>You do not have any notifications at this moment</p></li>
+                                    <li><p>{!!GoogleTranslate::translate('You do not have any notifications at this moment.', get_locale())!!}</p></li>
                                 @endif
                             </ul>
                         </div>
@@ -57,8 +57,8 @@
                                     <a href="javascript:void(0);"><img src="{{gravatar($user->email)}}" alt="{{$user->name}}"></a>
                                 </figure>
                                 <div class="tg-usercontent">
-                                    <h3>Hi! {{$user->name}}</h3>
-                                    <h4>Welcome</h4>
+                                    <h3>{!!GoogleTranslate::translate('Hi! '. $user->name, get_locale())!!}</h3>
+                                    <h4>{!!GoogleTranslate::translate('Welcome', get_locale())!!}</h4>
                                 </div>
                                 <a class="tg-btnedit" href="{{route('profile')}}"><i class="icon-pencil"></i></a>
                             </div>
@@ -67,36 +67,36 @@
                                     <li class="tg-active">
                                         <a href="{{route('dashboard')}}">
                                             <i class="icon-chart-bars"></i>
-                                            <span> Insights</span>
+                                            <span> {!!GoogleTranslate::translate('Insights', get_locale())!!}</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{route('profile')}}">
                                             <i class="icon-cog"></i>
-                                            <span>Profile Settings</span>
+                                            <span>{!!GoogleTranslate::translate('Profile Settings', get_locale())!!}</span>
                                         </a>
                                     </li>
                                     <li class="menu-item-">
                                         <a href="{{route('myads')}}">
                                             <i class="icon-layers"></i>
-                                            <span>My Ads</span>
+                                            <span>{!!GoogleTranslate::translate('myads', get_locale())!!}</span>
                                         </a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="javascript:void(0);">
                                             <i class="icon-envelope"></i>
-                                            <span>Offers/Messages</span>
+                                            <span>{!!GoogleTranslate::translate('Offers', get_locale())!!}</span>
                                         </a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Offer Received</a></li>
-                                            <li><a href="#">Offer Sent</a></li>
-                                            <li><a href="#">Trash</a></li>
+                                            <li><a href="#">{!!GoogleTranslate::translate('Offers Recieved', get_locale())!!}</a></li>
+                                            <li><a href="#">{!!GoogleTranslate::translate('Offers Sent', get_locale())!!}</a></li>
+                                            <li><a href="#">{!!GoogleTranslate::translate('Trash', get_locale())!!}</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <a href="#">
                                             <i class="icon-cart"></i>
-                                            <span>Payments</span>
+                                            <span>{!!GoogleTranslate::translate('Payment', get_locale())!!}</span>
                                         </a>
                                     </li>
                                     
@@ -105,7 +105,7 @@
                                                     onclick="event.preventDefault();
                                                                   document.getElementById('logout-form').submit();">
                                             <i class="icon-exit"></i>
-                                            <span>{{ __('Logout') }}</span>
+                                            <span>{!!GoogleTranslate::translate('Logout', get_locale())!!}</span>
                                                     </a>
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                     @csrf

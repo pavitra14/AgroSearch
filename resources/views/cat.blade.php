@@ -22,7 +22,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div class="tg-sectionhead">
                                     <div class="tg-title">
-                                        <h2>Ads related to {{$mode}}</h2>
+                                        <h2>{!!GoogleTranslate::translate('Ads Related to', get_locale())!!} {{$mode}}</h2>
                                     </div>
                                     <div class="tg-description">
                                         <p>Over {{$search->count()}} {{$mode}} Ads</p>

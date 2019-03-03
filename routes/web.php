@@ -14,17 +14,19 @@ use GuzzleHttp\Middleware;
 */
 
 Auth::routes();
-
+// Listing and frontpage
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/listing/{id}', 'ListingController@web_details')->name('listing_detail');
-
+// View all listings
 Route::get('/view/featured','ListingController@view_all_featured')->name('view_all_featured');
 Route::get('/view/latest','ListingController@view_all_latest')->name('view_all_latest');
-
+// for Searches
 Route::get('/search','ListingController@search');
 Route::get('/category/{id}','ListingController@cat_search');
 
+Route::get('/locale/{lang}','HomeController@set_locale');
 
+// For Listing Images
 Route::get('storage/{filename}', function ($filename)
 {
     $path = storage_path('public/' . $filename);

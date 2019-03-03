@@ -49,11 +49,11 @@ session()->forget('password');
                                         <i class="icon-layers"></i>
                                         <div class="tg-select">
                                             <select>
-                                                <option value="none">Select Category</option>
+                                                <option value="none">{!!GoogleTranslate::translate('Select Category', get_locale())!!}</option>
                                                 @php
                                                 for($i = 1; $i <= category_count() ; $i++) { echo "<option value='$i'>"
                                                     .category($i)."</option>"; } @endphp </select> </div> </div>
-                                                    <button class="tg-btn" type="submit">Search Now</button>
+                                                    <button class="tg-btn" type="submit">{!!GoogleTranslate::translate('Search Now', get_locale())!!}</button>
                                 </fieldset>
                             </form>
                         </div>
@@ -67,8 +67,8 @@ session()->forget('password');
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <ol class="tg-breadcrumb">
-                        <li><a href="loginsignup.html#">Home</a></li>
-                        <li class="tg-active">Login/Register</li>
+                        <li><a href="#">{!!GoogleTranslate::translate('Home', get_locale())!!}</a></li>
+                        <li class="tg-active">{!!GoogleTranslate::translate('Login/Register', get_locale())!!}</li>
                     </ol>
                 </div>
             </div>
@@ -88,7 +88,7 @@ session()->forget('password');
                 <div class="tg-loginsignup">
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <div class="tg-logingarea">
-                            <h2>Login Now</h2>
+                            <h2>{{!!GoogleTranslate::translate('Login Now', get_locale())!!}}</h2>
                             <form class="tg-formtheme tg-formloging" method="POST" action="{{route('login')}}">
                                 @csrf
                                 <fieldset>
@@ -101,11 +101,11 @@ session()->forget('password');
                                     <div class="form-group">
                                         <div class="tg-checkbox">
                                             <input id="tg-rememberme" type="checkbox" name="remember" value="rememberme">
-                                            <label for="tg-rememberme">Keep me logged in</label>
+                                            <label for="tg-rememberme">{!!GoogleTranslate::translate('Keep me logged in', get_locale())!!}</label>
                                         </div>
-                                        <a class="tg-forgetpassword" href="javascript:alert('soon');">Forgot Password?</a>
+                                        <a class="tg-forgetpassword" href="javascript:alert('soon');">{!!GoogleTranslate::translate('Forget password', get_locale())!!}</a>
                                     </div>
-                                    <button class="tg-btn" type="submit">Login</button>
+                                    <button class="tg-btn" type="submit">{!!GoogleTranslate::translate('Login', get_locale())!!}</button>
                                 </fieldset>
                             </form>
                         </div>
@@ -129,7 +129,7 @@ session()->forget('password');
                             </figure>
                         </div>
                         <div class="tg-title">
-                            <h2>Register Now</h2>
+                            <h2>{!!GoogleTranslate::translate('Register Now', get_locale())!!}</h2>
                         </div>
                         <div class="tg-haslayout">
                             <div class="row">
@@ -161,7 +161,7 @@ session()->forget('password');
                                                             &amp; Conditions</a></label>
                                                 </div>
                                             </div>
-                                            <button class="tg-btn" type="submit">Register</button>
+                                            <button class="tg-btn" type="submit">{!!GoogleTranslate::translate('Register', get_locale())!!}</button>
                                         </fieldset>
                                     </form>
                                 </div>

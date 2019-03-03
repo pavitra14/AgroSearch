@@ -1,0 +1,32 @@
+<?php
+
+return [
+    "World's Largest Marketplace For Farmers Search From 2 Awesome Verified Ads!"  => "ਕਿਸਾਨਾਂ ਦੇ ਲਈ ਵਿਸ਼ਵ ਦਾ ਸਭ ਤੋਂ ਵੱਡਾ ਬਾਜ਼ਾਰ 2 ਬਹੁਤ ਵਧੀਆ ਪੜਤਾਲ ਕੀਤੇ ਵਿਗਿਆਪਨਾਂ ਤੋਂ ਲੱਭੋ!",
+	'What Are You Looking Far'=>'ਤੁਸੀਂ ਕੀ ਵੇਖ ਰਹੇ ਹੋ',
+	'Your Location'=>'ਤੁਹਾਡਾ ਸਥਾਨ',
+	'Select Category'=>'ਸ਼੍ਰੇਣੀ ਚੁਣੋ',
+	'Search Now'=>'ਹੁਣੇ ਲੱਭੋ',
+	'Boost Your Search With Trending Categories'=>'Trending Categories ਦੇ ਨਾਲ ਆਪਣੀ ਖੋਜ ਨੂੰ ਵਧਾਓ',
+	'Cultivators'=>'ਕਾਸ਼ਤਕਾਰ',
+	'Irrigation Tools'=>'ਸਿੰਚਾਈ ਟੂਲ',
+	'Cultivation Tools'=>'ਖੇਤ ਸਾਧਨ',
+	'Fertilization Tools'=>'ਉਪਜਾਊਕਰਣ ਟੂਲ',
+	'Consumables'=>'ਖਪਤਕਾਰੀ',
+	'Listings'=>'ਸੂਚੀਆਂ',
+	'Home'=>'ਘਰ',
+	'Dashboard'=>'ਡੈਸ਼ਬੋਰਡ',
+	'Pages'=>'ਪੰਨੇ',
+	'AGROSEARCH'=>'AGROSEARCH',
+	'Featured Ads Over 1 Featured Ads'=>'ਫੀਚਰ ਕੀਤੇ 1 ਤੋਂ ਵੱਧ ਫੀਚਰ ਵਿਗਿਆਪਨ',
+	'View All'=>'ਸਭ ਵੇਖੋ',
+	'Classified'=>'ਵਰਗੀਕਰਣ',
+	'AgroSearch Share, Sell and Rent Agriculture equipments '=>'ਐਗਰੀ ਸਾੱਰਚ ਸ਼ੇਅਰ, ਵੇਚ ਅਤੇ ਰੈਂਟ ਐਗਰੀਕਲਚਰਜ਼ ਉਪਕਰਣ ',
+	'Classified Market place'=>'ਜਾਤੀ ਦੇ ਮਾਰਕੀਟ ਸਥਾਨ',
+	'Listings Policy'=>'ਸੂਚੀਕਰਨ ਨੀਤੀ',
+	'Terms of Use'=>'ਵਰਤੋ ਦੀਆਂ ਸ਼ਰਤਾਂ',
+	'Privacy Policy'=>'ਪਰਾਈਵੇਟ ਨੀਤੀ',
+	'Sitemap'=>'ਸਾਈਟਮੈਪ',
+	'News'=>'ਨਿਊਜ਼',
+	'2018 All Rights Reserved @ Narcodes'=>'2018 ਸਭ ਹੱਕ ਰਾਖਵੇਂ @ ਨਰਕੋਡ',
+	'Search By Locations'=>'ਸਥਾਨ ਦੁਆਰਾ ਖੋਜੋ'
+	];

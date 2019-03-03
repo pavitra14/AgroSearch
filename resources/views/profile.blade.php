@@ -7,7 +7,7 @@ Profile | AgroSearch
 				Dashboard Banner Start
 		*************************************-->
 <div class="tg-dashboardbanner">
-    <h1>Profile Settings</h1>
+    <h1>{!!GoogleTranslate::translate('Profile Settings', get_locale())!!}</h1>
     <ol class="tg-breadcrumb">
         <li><a href="{{route('home')}}">Home</a></li>
         <li><a href="{{route('dashboard')}}">Dashboard</a></li>

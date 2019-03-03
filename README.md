@@ -9,8 +9,8 @@
 
 ## About AgroSearch
 
-AgroSearch Mobile API built using Laravel.
-This Project was made for Smart India Hackathon 2019 Finale, held on 2nd & 3rd March 2019, in Bangalore.
+AgroSearch Mobile API/PWA and Web Interface was built using Laravel.
+This Project was made for Smart India Hackathon 2019 Finale by Team Narcodes, held on 2nd & 3rd March 2019, in Bangalore.
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
@@ -23,6 +23,16 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+
+## Running/Installing
+
+1. Run composer install once you clone the repo
+2. create a .env file from .env.example and replace the essential credentials.
+3. run php artisan passport:install
+4. run php artisan migrate
+5. run php artisan storage:link
+6. finally, php artisan serve
+
 
 ## Learning Laravel
 

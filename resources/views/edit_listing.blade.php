@@ -35,7 +35,7 @@ Edit Listing | AgroSearch
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
                         <div class="tg-dashboardbox">
                             <div class="tg-dashboardboxtitle">
-                                <h2>Ad Detail</h2>
+                                <h2>{!!GoogleTranslate::translate('Ad Details', get_locale())!!}</h2>
                             </div>
                             <div class="tg-dashboardholder">
                                 <div class="form-group text-center">

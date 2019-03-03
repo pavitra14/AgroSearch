@@ -1,0 +1,32 @@
+<?php
+
+return [
+    "World's Largest Marketplace For Farmers Search From 2 Awesome Verified Ads!"  => "2 ಅದ್ಭುತವಾದ ಜಾಹೀರಾತುಗಳಿಂದ ರೈತರ ಹುಡುಕಾಟಕ್ಕಾಗಿ ವಿಶ್ವದ ಅತಿದೊಡ್ಡ ಮಾರುಕಟ್ಟೆ ಸ್ಥಳ!",
+	'What Are You Looking Far'=>'ನೀವು ಏನು ನೋಡುತ್ತಿದ್ದೀರಿ?',
+	'Your Location'=>'ನಿಮ್ಮ ಸ್ಥಳ',
+	'Select Category'=>'ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ',
+	'Search Now'=>'ಈಗ ಹುಡುಕಿ',
+	'Boost Your Search With Trending Categories'=>'ಟ್ರೆಂಡಿಂಗ್ ವರ್ಗಗಳೊಂದಿಗೆ ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಹೆಚ್ಚಿಸಿ',
+	'Cultivators'=>'ಬೆಳೆಗಾರರು',
+	'Irrigation Tools'=>'ನೀರಾವರಿ ಉಪಕರಣಗಳು',
+	'Cultivation Tools'=>'ಕೃಷಿ ಉಪಕರಣಗಳು',
+	'Fertilization Tools'=>'ಫರ್ಟಿಲೈಸೇಶನ್ ಪರಿಕರಗಳು',
+	'Consumables'=>'ಗ್ರಾಹಕರು',
+	'Listings'=>'ಪಟ್ಟಿಗಳು',
+	'Home'=>'ಮುಖಪುಟ',
+	'Dashboard'=>'ಡ್ಯಾಶ್ಬೋರ್ಡ್',
+	'Pages'=>'ಪುಟಗಳು',
+	'AGROSEARCH'=>'AGROSEARCH',
+	'Featured Ads Over 1 Featured Ads'=>'ವೈಶಿಷ್ಟ್ಯಗೊಳಿಸಿದ ಜಾಹೀರಾತುಗಳನ್ನು 1 ವೈಶಿಷ್ಟ್ಯಗೊಳಿಸಿದ ಜಾಹೀರಾತುಗಳ ಮೇಲೆ',
+	'View All'=>'ಎಲ್ಲಾ ವೀಕ್ಷಿಸಿ',
+	'Classified'=>'ವರ್ಗೀಕರಿಸಲಾಗಿದೆ',
+	'AgroSearch Share, Sell and Rent Agriculture equipments '=>'ಕೃಷಿ ಸಲಕರಣೆಗಳು ಕೃಷಿ ಸಲಕರಣೆಗಳನ್ನು ಹಂಚಿ, ಮಾರಾಟ ಮಾಡಿ ಮತ್ತು ಬಾಡಿಗೆಗೆ ನೀಡಿ ',
+	'Classified Market place'=>'ವರ್ಗೀಕರಿಸಿದ ಮಾರುಕಟ್ಟೆ ಸ್ಥಳ',
+	'Listings Policy'=>'ಪಟ್ಟಿಗಳು ನೀತಿ',
+	'Terms of Use'=>'ಬಳಕೆಯ ನಿಯಮಗಳು',
+	'Privacy Policy'=>'ಗೌಪ್ಯತಾ ನೀತಿ',
+	'Sitemap'=>'ಸೈಟ್ಮ್ಯಾಪ್',
+	'News'=>'ಸುದ್ದಿ',
+	'2018 All Rights Reserved @ Narcodes'=>'2018 ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ @ ನಾರ್ಕೊಡ್ಸ್',
+	'Search By Locations'=>'ಸ್ಥಳಗಳಿಂದ ಹುಡುಕಿ'
+	];

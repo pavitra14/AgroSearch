@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use Illuminate\Http\Request;
 use App\Listing;
 use function GuzzleHttp\json_encode;
@@ -12,7 +13,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         $total_count = Listing::count();
         $featured = Listing::where([
@@ -27,6 +28,22 @@ class HomeController extends Controller
             'featured_listings' => $featured,
             'latest_listings' => $latest
         );
+        if($request->ajax())
+        {
+            return view('home', $response)->render();
+        }
         return view('home', $response);
+    }
+
+    public function set_locale($lang)
+    {
+        if(session()->has('locale'))
+        {
+            session()->forget('locale');
+            session()->put('locale', $lang);
+        } else {
+            session()->put('locale', $lang);
+        }
+        return 'success';
     }
 }

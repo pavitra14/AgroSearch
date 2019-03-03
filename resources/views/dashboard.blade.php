@@ -1,6 +1,6 @@
 @extends('layouts.panel')
 @section('title')
-    {{$user->name}} Dashboard | AgroSearch
+    {{$user->name}} {!!GoogleTranslate::translate('Dashboard', get_locale())!!} | AgroSearch
 @endsection
 
 @section('heading')
@@ -8,7 +8,7 @@
                     Dashboard Banner Start
             *************************************-->
             <div class="tg-dashboardbanner">
-                    <h1>Dashboard</h1>
+                    <h1>{!!GoogleTranslate::translate('Dashboard', get_locale())!!}</h1>
                     <ol class="tg-breadcrumb">
                         <li><a href="{{route('home')}}">Main</a></li>
                         <li class="tg-active">Dashboard</li>
