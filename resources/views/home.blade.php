@@ -118,13 +118,13 @@
                                     </div> --}}
                                 </div>
                             </div>
-                            <div class="tg-ads tg-adsvtwo">
+                            <div class="tg-ads">
                                 @foreach ($latest_listings as $listing)
                                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                                         <div class="tg-ad tg-verifiedad">
                                             <figure>
                                                 {{-- <span class="tg-themetag tg-featuretag">featured</span> --}}
-                                                <a href="{{url('/listing/'.$listing->id)}}"><img src="{{$listing->listing_img}}" alt="{{$listing->listing_desc}}"></a>
+                                                <a href="{{url('/listing/'.$listing->id)}}"><img src="{{$listing->listing_img}}" alt="{{$listing->listing_desc}}" class="img-responsive"></a>
                                             </figure>
                                             <div class="tg-adcontent">
                                                 <ul class="tg-productcagegories">
