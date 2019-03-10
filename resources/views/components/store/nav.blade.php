@@ -8,7 +8,11 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <ul class="tg-navcurrency">
                         <li><a href="#" data-toggle="modal" data-target="#tg-modalselectcurrency">Current Language : 
-						{{session('locale') ?? 'en'}}</a></li>
+						@if (get_locale() == 'DONT')
+                            Localisation Disabled
+                        @else
+                        {{session('locale') ?? 'en'}}
+                        @endif</a></li>
                     </ul>
                     <div class="dropdown tg-themedropdown tg-userdropdown">
                         <a href="javascript:void(0);" id="tg-adminnav" class="tg-btndropdown" data-toggle="dropdown">
