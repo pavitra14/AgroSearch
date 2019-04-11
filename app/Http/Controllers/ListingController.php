@@ -31,19 +31,13 @@ class ListingController extends Controller
 
     public function upload_listing(Request $request)
     {
-        $user = Auth::user();
-        $validator = Validator::make($request->all(), [ 
-            'listing_title' => 'required', 
-            'listing_type' => 'required|integer', 
-            'listing_desc' => 'required', 
-            'listing_rate' => 'required',
-            'listing_mode' => 'required',
-            'listing_img' => 'nullable',
-        ]);
-        if ($validator->fails()) { 
-            return response()->json(['error'=>$validator->errors()], 401);            
-        }
+        $listing_img = $request->file('listing_img_file')->store('public');
+        $listing_img = \str_replace("public","storage",$listing_img);
         $input = $request->all();
+        $input['listing_img'] = $listing_img;        
+        $input['listing_date_from'] = str_replace("/","-",$input['listing_date_from-x']);
+        $input['listing_date_to'] = str_replace("/","-",$input['listing_date_to-x']);
+        $user = Auth::user();
         $listing = $user->listings()->create($input);
         $success['status'] = "Done";
         $success['listing_details'] = $listing;
@@ -66,13 +60,9 @@ class ListingController extends Controller
         $listing_img = $request->file('listing_img_file')->store('public');
         $listing_img = \str_replace("public","storage",$listing_img);
         $input = $request->all();
-        $input['listing_img'] = $listing_img;
-        // dd($request->all());
-        // $input['listing_date_from'] = date('Y-m-d H:i:s', strtotime($input['listing_date_from-x']));
-        // $input['listing_date_to'] = date('Y-m-d H:i:s', strtotime($input['listing_date_to-x']));
+        $input['listing_img'] = $listing_img;        
         $input['listing_date_from'] = str_replace("/","-",$input['listing_date_from-x']);
         $input['listing_date_to'] = str_replace("/","-",$input['listing_date_to-x']);
-        // dd($input);
         $user = Auth::user();
         $listing = $user->listings()->create($input);
         session()->put('success',"Listing Uploaded");
